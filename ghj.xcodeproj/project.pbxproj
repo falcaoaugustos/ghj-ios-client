@@ -14,6 +14,7 @@
 		B53B5F541FB3F6B700438F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53B5F521FB3F6B700438F12 /* LaunchScreen.storyboard */; };
 		B53B5F5F1FB3F6B800438F12 /* ghjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B5F5E1FB3F6B800438F12 /* ghjTests.swift */; };
 		B53B5F6A1FB3F6B800438F12 /* ghjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B5F691FB3F6B800438F12 /* ghjUITests.swift */; };
+		B53B5F781FB4CF5800438F12 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B5F771FB4CF5800438F12 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B53B5F651FB3F6B800438F12 /* ghjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ghjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53B5F691FB3F6B800438F12 /* ghjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ghjUITests.swift; sourceTree = "<group>"; };
 		B53B5F6B1FB3F6B800438F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B53B5F771FB4CF5800438F12 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		B53B5F481FB3F6B700438F12 /* ghj */ = {
 			isa = PBXGroup;
 			children = (
+				B53B5F791FB4D0C300438F12 /* Models */,
 				B53B5F491FB3F6B700438F12 /* AppDelegate.swift */,
 				B53B5F4B1FB3F6B700438F12 /* ViewController.swift */,
 				B53B5F4D1FB3F6B700438F12 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				B53B5F6B1FB3F6B800438F12 /* Info.plist */,
 			);
 			path = ghjUITests;
+			sourceTree = "<group>";
+		};
+		B53B5F791FB4D0C300438F12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B53B5F771FB4CF5800438F12 /* Job.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53B5F4C1FB3F6B700438F12 /* ViewController.swift in Sources */,
+				B53B5F781FB4CF5800438F12 /* Job.swift in Sources */,
 				B53B5F4A1FB3F6B700438F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
