@@ -18,6 +18,7 @@
 		B53B5F7C1FB4E71400438F12 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B5F7A1FB4E71400438F12 /* JobTableViewCell.swift */; };
 		B53B5F7D1FB4E71400438F12 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53B5F7B1FB4E71400438F12 /* JobTableViewCell.xib */; };
 		B563ABA91FB7DADB005D7A6C /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABA81FB7DADB005D7A6C /* TextFormatter.swift */; };
+		B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B53B5F7A1FB4E71400438F12 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		B53B5F7B1FB4E71400438F12 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		B563ABA81FB7DADB005D7A6C /* TextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		B53B5F481FB3F6B700438F12 /* ghj */ = {
 			isa = PBXGroup;
 			children = (
+				B563ABAA1FB7E349005D7A6C /* Network */,
 				B563ABA71FB7DACD005D7A6C /* Helpers */,
 				B53B5F791FB4D0C300438F12 /* Models */,
 				B53B5F491FB3F6B700438F12 /* AppDelegate.swift */,
@@ -151,6 +154,22 @@
 				B563ABA81FB7DADB005D7A6C /* TextFormatter.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B563ABAA1FB7E349005D7A6C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B563ABAC1FB7E3B6005D7A6C /* Protocols */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B563ABAC1FB7E3B6005D7A6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +312,7 @@
 				B53B5F781FB4CF5800438F12 /* Job.swift in Sources */,
 				B53B5F4A1FB3F6B700438F12 /* AppDelegate.swift in Sources */,
 				B53B5F7C1FB4E71400438F12 /* JobTableViewCell.swift in Sources */,
+				B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
