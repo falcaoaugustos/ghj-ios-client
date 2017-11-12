@@ -50,7 +50,9 @@ class ViewController: UITableViewController {
         } catch {
             print("Serialization error:")
         }
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: Data Source
