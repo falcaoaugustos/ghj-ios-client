@@ -19,6 +19,7 @@
 		B53B5F7D1FB4E71400438F12 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53B5F7B1FB4E71400438F12 /* JobTableViewCell.xib */; };
 		B563ABA91FB7DADB005D7A6C /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABA81FB7DADB005D7A6C /* TextFormatter.swift */; };
 		B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */; };
+		B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABB01FB7E77E005D7A6C /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B53B5F7B1FB4E71400438F12 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		B563ABA81FB7DADB005D7A6C /* TextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
 		B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
+		B563ABB01FB7E77E005D7A6C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				B563ABAC1FB7E3B6005D7A6C /* Protocols */,
+				B563ABAF1FB7E754005D7A6C /* Request */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -170,6 +173,14 @@
 				B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B563ABAF1FB7E754005D7A6C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B563ABB01FB7E77E005D7A6C /* UserService.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				B53B5F781FB4CF5800438F12 /* Job.swift in Sources */,
 				B53B5F4A1FB3F6B700438F12 /* AppDelegate.swift in Sources */,
 				B53B5F7C1FB4E71400438F12 /* JobTableViewCell.swift in Sources */,
+				B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */,
 				B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
