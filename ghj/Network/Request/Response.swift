@@ -26,16 +26,16 @@ enum Response {
     case json(_: Data?)
     case error(_: Int?, _: Error, _: Data?)
 
-    init(_ response: (r: HTTPURLResponse?, data: Data?, error: Error?), for request: ServiceRequest) {
+    init(_ response: (data: Data?, resp: HTTPURLResponse?, error: Error?), for request: ServiceRequest) {
         if let error = response.error {
-            self = .error(response.r?.statusCode, error, response.data)
+            self = .error(response.resp?.statusCode, error, response.data)
             return
-        } else if response.r?.statusCode == 401 {
-            self = .error(response.r?.statusCode, ResponseError.unauthorized, response.data)
+        } else if response.resp?.statusCode == 401 {
+            self = .error(response.resp?.statusCode, ResponseError.unauthorized, response.data)
             return
-        } else if let httpErrorCode = response.r?.statusCode,
+        } else if let httpErrorCode = response.resp?.statusCode,
             httpErrorCode < 200 || httpErrorCode > 299 {
-            self = .error(response.r?.statusCode, ResponseError.internalError, response.data)
+            self = .error(response.resp?.statusCode, ResponseError.internalError, response.data)
             return
         }
 
