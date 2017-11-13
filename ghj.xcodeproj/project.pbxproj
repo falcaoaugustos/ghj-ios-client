@@ -21,6 +21,8 @@
 		B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */; };
 		B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABB01FB7E77E005D7A6C /* UserService.swift */; };
 		B5929EF41FB9440400A80311 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5929EF31FB9440400A80311 /* Response.swift */; };
+		B5E5A9371FBA1057003A8756 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5A9361FBA1057003A8756 /* RequestDispatcher.swift */; };
+		B5E5A93A1FBA1111003A8756 /* ServerDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5A9391FBA1111003A8756 /* ServerDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B563ABB01FB7E77E005D7A6C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B5929EF31FB9440400A80311 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B5E5A9361FBA1057003A8756 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
+		B5E5A9391FBA1111003A8756 /* ServerDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			children = (
 				B563ABAC1FB7E3B6005D7A6C /* Protocols */,
 				B563ABAF1FB7E754005D7A6C /* Request */,
+				B5E5A9381FBA10FA003A8756 /* Dispatchers */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */,
+				B5E5A9361FBA1057003A8756 /* RequestDispatcher.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -184,6 +190,14 @@
 				B5929EF31FB9440400A80311 /* Response.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		B5E5A9381FBA10FA003A8756 /* Dispatchers */ = {
+			isa = PBXGroup;
+			children = (
+				B5E5A9391FBA1111003A8756 /* ServerDispatcher.swift */,
+			);
+			path = Dispatchers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,12 +337,14 @@
 			files = (
 				B5929EF41FB9440400A80311 /* Response.swift in Sources */,
 				B563ABA91FB7DADB005D7A6C /* TextFormatter.swift in Sources */,
+				B5E5A9371FBA1057003A8756 /* RequestDispatcher.swift in Sources */,
 				B53B5F4C1FB3F6B700438F12 /* ViewController.swift in Sources */,
 				B53B5F781FB4CF5800438F12 /* Job.swift in Sources */,
 				B53B5F4A1FB3F6B700438F12 /* AppDelegate.swift in Sources */,
 				B53B5F7C1FB4E71400438F12 /* JobTableViewCell.swift in Sources */,
 				B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */,
 				B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */,
+				B5E5A93A1FBA1111003A8756 /* ServerDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
