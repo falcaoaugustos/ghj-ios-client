@@ -14,7 +14,7 @@ enum UserService: ServiceRequest {
     var path: String {
         switch self {
         case let .getJobList(description, location):
-            return "/positions.json?description=\(description ?? "")&location=\(location ?? "")"
+            return "/positions.json?description=\(TextFormater.transformation(text: description ?? ""))&location=\(TextFormater.transformation(text: location ?? ""))"
         }
     }
 
