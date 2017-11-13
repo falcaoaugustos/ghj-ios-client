@@ -21,6 +21,7 @@
 		B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */; };
 		B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABB01FB7E77E005D7A6C /* UserService.swift */; };
 		B5929EF41FB9440400A80311 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5929EF31FB9440400A80311 /* Response.swift */; };
+		B5929EF71FB9454F00A80311 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5929EF61FB9454F00A80311 /* Dispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B563ABB01FB7E77E005D7A6C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B5929EF31FB9440400A80311 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B5929EF61FB9454F00A80311 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				B563ABAD1FB7E3C6005D7A6C /* ServiceRequest.swift */,
+				B5929EF61FB9454F00A80311 /* Dispatcher.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				B5929EF41FB9440400A80311 /* Response.swift in Sources */,
 				B563ABA91FB7DADB005D7A6C /* TextFormatter.swift in Sources */,
+				B5929EF71FB9454F00A80311 /* Dispatcher.swift in Sources */,
 				B53B5F4C1FB3F6B700438F12 /* ViewController.swift in Sources */,
 				B53B5F781FB4CF5800438F12 /* Job.swift in Sources */,
 				B53B5F4A1FB3F6B700438F12 /* AppDelegate.swift in Sources */,
