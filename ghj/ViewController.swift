@@ -16,11 +16,13 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.register(UINib.init(nibName: "JobTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "JobCell")
-
+        /*
         let url = URL(string: "https://jobs.github.com/positions.json?description=python&location=new+york")
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            self.vaiDarATreta(receivedData: data)
-        }.resume()
+         */
+
+        let request = UserService.getJobList("python", "san francisco")
+        print(request.path)
+        execute(request: request)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,21 +30,49 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func vaiDarATreta(receivedData: Data?) {
+    func execute(request: ServiceRequest) {
+        print(request)
+        let requestUrl = prepareURLRequest(for: request)
+
+        switch request.dataType {
+        case .json:
+            var req = URLRequest(url: requestUrl)
+            req.httpBody = request.body
+            req.allHTTPHeaderFields = request.header
+            req.httpMethod = request.method.rawValue
+
+            URLSession.shared.dataTask(with: req) { (data, resp, error) in
+                let serverResponse = Response((data: data, resp: resp as? HTTPURLResponse, error: error), for: request)
+
+                switch serverResponse {
+                case let .error(httpErrorCode, error, _):
+                    print("Error: \(httpErrorCode ?? 0) -> \(error.localizedDescription)")
+                case .json(let data):
+                    self.deserialize(receivedData: data)
+                }
+            }.resume()
+        }
+    }
+
+    private func prepareURLRequest(for request: ServiceRequest) -> URL {
+        return URL(string: "https://jobs.github.com\(request.path)")!
+    }
+
+    func deserialize(receivedData: Data?) {
         guard let data = receivedData else { return }
         do {
             let mainData = try JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
             mainData.forEach({
                 print("dolar zero: \($0)")
                 let job = Job(
-                    id: $0["id"] as! String,
-                    title: $0["title"] as! String,
-                    location: $0["location"] as! String,
-                    type: $0["type"] as! String,
-                    company: $0["company"] as! String,
-                    companyUrl: $0["company_url"] as! String,
-                    // companyLogo: $0["company_logo"] as! String,
-                    url: $0["url"] as! String
+                    id: $0["id"] as? String ?? "",
+                    title: $0["title"] as? String ?? "",
+                    location: $0["location"] as? String ?? "",
+                    type: $0["type"] as? String ?? "",
+                    company: $0["company"] as? String ?? "",
+                    companyUrl: $0["company_url"] as? String ?? "",
+                    companyLogo: $0["company_logo"] as? String ?? "",
+                    url: $0["url"] as? String ?? ""
                 )
                 print("glorioso job: \(job)")
                 self.jobs.append(job)

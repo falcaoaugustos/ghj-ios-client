@@ -165,7 +165,6 @@
 			children = (
 				B563ABAC1FB7E3B6005D7A6C /* Protocols */,
 				B563ABAF1FB7E754005D7A6C /* Request */,
-				B5929EF81FB945FE00A80311 /* Dispatcher */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -185,13 +184,6 @@
 				B5929EF31FB9440400A80311 /* Response.swift */,
 			);
 			path = Request;
-			sourceTree = "<group>";
-		};
-		B5929EF81FB945FE00A80311 /* Dispatcher */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dispatcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
