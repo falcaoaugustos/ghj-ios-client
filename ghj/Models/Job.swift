@@ -15,6 +15,6 @@ struct Job {
     let type: String
     let company: String
     let companyUrl: String
-    // let companyLogo: String
+    let companyLogo: String
     let url: String
 }
