@@ -21,7 +21,7 @@ protocol ServiceRequest {
     var path: String { get }
     var method: HTTPMethod { get }
     var body: Data? { get }
-    var headers: [[String: String]]? { get }
+    var header: [String: String]? { get }
     var dataType: ResponseType { get }
 }
 
