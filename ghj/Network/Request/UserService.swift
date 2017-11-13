@@ -32,7 +32,7 @@ enum UserService: ServiceRequest {
         }
     }
 
-    var headers: [[String : String]]? {
+    var header: [String : String]? {
         switch self {
         case .getJobList(_, _):
             return nil
