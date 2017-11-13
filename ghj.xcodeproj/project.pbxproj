@@ -22,6 +22,7 @@
 		B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563ABB01FB7E77E005D7A6C /* UserService.swift */; };
 		B5929EF41FB9440400A80311 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5929EF31FB9440400A80311 /* Response.swift */; };
 		B5929EF71FB9454F00A80311 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5929EF61FB9454F00A80311 /* Dispatcher.swift */; };
+		B5929EFA1FB9464300A80311 /* ServerDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5929EF91FB9464300A80311 /* ServerDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B563ABB01FB7E77E005D7A6C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B5929EF31FB9440400A80311 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B5929EF61FB9454F00A80311 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		B5929EF91FB9464300A80311 /* ServerDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				B563ABAC1FB7E3B6005D7A6C /* Protocols */,
 				B563ABAF1FB7E754005D7A6C /* Request */,
+				B5929EF81FB945FE00A80311 /* Dispatcher */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -187,6 +190,14 @@
 				B5929EF31FB9440400A80311 /* Response.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		B5929EF81FB945FE00A80311 /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				B5929EF91FB9464300A80311 /* ServerDispatcher.swift */,
+			);
+			path = Dispatcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 				B53B5F7C1FB4E71400438F12 /* JobTableViewCell.swift in Sources */,
 				B563ABB11FB7E77E005D7A6C /* UserService.swift in Sources */,
 				B563ABAE1FB7E3C6005D7A6C /* ServiceRequest.swift in Sources */,
+				B5929EFA1FB9464300A80311 /* ServerDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
