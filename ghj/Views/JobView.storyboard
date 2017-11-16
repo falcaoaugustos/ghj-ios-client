@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Job-->
+        <!--Job Information-->
         <scene sceneID="0wu-Lw-QBh">
             <objects>
                 <viewController id="3rb-Vn-H8m" customClass="JobController" customModule="ghj" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,8 +29,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="l2O-i8-15U"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Job" id="bTp-0q-p1Z">
+                    <navigationItem key="navigationItem" title="Job Information" id="bTp-0q-p1Z">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Q0H-6f-N5H">
+                            <color key="tintColor" red="0.27843137254901962" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="dismissController:" destination="3rb-Vn-H8m" id="50l-fT-IDn"/>
                             </connections>

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Jobs Search Results-->
         <scene sceneID="RbQ-hT-DAN">
             <objects>
                 <tableViewController id="olh-TU-LQh" customClass="JobsTableController" customModule="ghj" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,8 +31,9 @@
                             <outlet property="delegate" destination="olh-TU-LQh" id="yoF-fi-tmH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rNB-6u-xFX">
+                    <navigationItem key="navigationItem" title="Jobs Search Results" id="rNB-6u-xFX">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="lKQ-TT-lu1">
+                            <color key="tintColor" red="0.27843137254901962" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="dismissController:" destination="olh-TU-LQh" id="J4g-Rc-av8"/>
                             </connections>
