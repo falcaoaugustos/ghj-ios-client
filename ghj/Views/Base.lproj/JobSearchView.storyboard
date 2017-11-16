@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,30 +19,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (Language, Technology)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J94-QM-sa0">
-                                <rect key="frame" x="36" y="141" width="303" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (Language, Technology)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J94-QM-sa0">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J94-QM-sa0" secondAttribute="height" multiplier="10:1" id="kkB-Wg-TEu"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-Ym-hLW">
-                                <rect key="frame" x="36" y="230" width="303" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-Ym-hLW">
+                                <rect key="frame" x="37.5" y="248.5" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7cU-Ym-hLW" secondAttribute="height" multiplier="10:1" id="ykn-5C-gFN"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7br-Lp-ZpA">
-                                <rect key="frame" x="145" y="361" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search Jobs"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7br-Lp-ZpA">
+                                <rect key="frame" x="37.5" y="328.5" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7br-Lp-ZpA" secondAttribute="height" multiplier="10:1" id="fTh-UC-lQb"/>
+                                </constraints>
+                                <state key="normal" title="Search Jobs">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didPressedSearchJobsButton" destination="2Ku-TB-t3L" eventType="touchUpInside" id="zFx-F7-7yI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7cU-Ym-hLW" firstAttribute="top" secondItem="J94-QM-sa0" secondAttribute="bottom" constant="25" id="0PN-Ui-AYi"/>
+                            <constraint firstItem="7cU-Ym-hLW" firstAttribute="centerX" secondItem="RG0-31-Ce6" secondAttribute="centerX" id="7Yk-vJ-fcw"/>
+                            <constraint firstItem="7cU-Ym-hLW" firstAttribute="width" secondItem="pC3-g5-vcW" secondAttribute="width" multiplier="300/375" id="8b9-bh-S2e"/>
+                            <constraint firstItem="7br-Lp-ZpA" firstAttribute="centerY" secondItem="RG0-31-Ce6" secondAttribute="centerY" id="99N-TW-DIK"/>
+                            <constraint firstItem="J94-QM-sa0" firstAttribute="width" secondItem="pC3-g5-vcW" secondAttribute="width" multiplier="300/375" id="MCt-cb-yN6"/>
+                            <constraint firstItem="7br-Lp-ZpA" firstAttribute="centerX" secondItem="RG0-31-Ce6" secondAttribute="centerX" id="NSo-na-rXz"/>
+                            <constraint firstItem="7br-Lp-ZpA" firstAttribute="width" secondItem="pC3-g5-vcW" secondAttribute="width" multiplier="300/375" id="cv0-c7-hdB"/>
+                            <constraint firstItem="7br-Lp-ZpA" firstAttribute="top" secondItem="7cU-Ym-hLW" secondAttribute="bottom" constant="50" id="hVv-mN-POp"/>
+                            <constraint firstItem="J94-QM-sa0" firstAttribute="centerX" secondItem="RG0-31-Ce6" secondAttribute="centerX" id="uCc-yw-aKf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RG0-31-Ce6"/>
                     </view>
                     <connections>
