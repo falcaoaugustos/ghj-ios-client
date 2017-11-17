@@ -8,14 +8,9 @@
 
 import UIKit
 
-protocol JobTableViewCellDelegate {
-    func didFinishDownloadImage()
-}
-
 class JobTableViewCell: UITableViewCell {
 
     var job: Job?
-    var delegate: JobTableViewCellDelegate? = nil
 
     @IBOutlet weak var companyLogo: UIImageView!
 
