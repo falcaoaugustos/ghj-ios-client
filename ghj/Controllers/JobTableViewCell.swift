@@ -48,11 +48,16 @@ class JobTableViewCell: UITableViewCell {
     }
 
     func getImageFrom(url: String) {
-        URLSession.shared.dataTask(with: URL(string: url)!) { (data, resp, error) in
-            DispatchQueue.main.async {
-                self.companyLogo = UIImageView(image: UIImage(data: data ?? Data()))
-                self.delegate?.didFinishDownloadImage()
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let imageData = try Data(contentsOf: URL(string: url)!)
+
+                DispatchQueue.main.async {
+                    self.companyLogo.image = UIImage(data: imageData)
+                }
+            } catch let error {
+                print(error)
             }
-        }.resume()
+        }
     }
 }
