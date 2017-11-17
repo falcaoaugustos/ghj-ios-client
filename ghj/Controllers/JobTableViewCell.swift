@@ -30,12 +30,10 @@ class JobTableViewCell: UITableViewCell {
     }
 
     func loadData() {
-        // companyLogo = job?.companyLogo
         if let url = job?.companyLogo, job?.companyLogo != "" {
-            print(url)
             getImageFrom(url: url)
         } else {
-            getImageFrom(url: "https://cdn.browshot.com/static/images/not-found.png")
+            companyLogo.image = UIImage(named: "imageNotFound")
         }
         company.text = job?.company
         title.text = job?.title

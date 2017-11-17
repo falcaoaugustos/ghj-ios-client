@@ -17,11 +17,9 @@ class JobsTableController: UITableViewController, ServerDispatcherDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.register(UINib.init(nibName: "JobTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "JobCell")
-        /*
-         let url = URL(string: "https://jobs.github.com/positions.json?description=python&location=new+york")
-         */
 
-        // let request = UserService.getJobList("python", "san francisco")
+        // let url = URL(string: "https://jobs.github.com/positions.json?description=python&location=new+york")
+
         let request = UserService.getJobList(requestParameters.0, requestParameters.1)
         let serverDispatcher = ServerDispatcher(environment: "https://jobs.github.com")
         serverDispatcher.delegate = self
@@ -65,8 +63,6 @@ class JobsTableController: UITableViewController, ServerDispatcherDelegate {
     // MARK: Table View Delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("BOM: \(indexPath.row)")
-
         performSegue(withIdentifier: "JobViewSegue", sender: jobs[indexPath.row])
     }
 
