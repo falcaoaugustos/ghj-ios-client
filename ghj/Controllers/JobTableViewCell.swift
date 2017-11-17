@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol JobTableViewCellDelegate {
+    func didFinishDownloadImage()
+}
+
 class JobTableViewCell: UITableViewCell {
 
     var job: Job?
+    var delegate: JobTableViewCellDelegate? = nil
 
     @IBOutlet weak var companyLogo: UIImageView!
 
@@ -31,9 +36,23 @@ class JobTableViewCell: UITableViewCell {
 
     func loadData() {
         // companyLogo = job?.companyLogo
+        if let url = job?.companyLogo, job?.companyLogo != "" {
+            print(url)
+            getImageFrom(url: url)
+        } else {
+            getImageFrom(url: "https://cdn.browshot.com/static/images/not-found.png")
+        }
         company.text = job?.company
         title.text = job?.title
         location.text = job?.location
     }
-    
+
+    func getImageFrom(url: String) {
+        URLSession.shared.dataTask(with: URL(string: url)!) { (data, resp, error) in
+            DispatchQueue.main.async {
+                self.companyLogo = UIImageView(image: UIImage(data: data ?? Data()))
+                self.delegate?.didFinishDownloadImage()
+            }
+        }.resume()
+    }
 }

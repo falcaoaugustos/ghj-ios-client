@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JobsTableController: UITableViewController, ServerDispatcherDelegate {
+class JobsTableController: UITableViewController, ServerDispatcherDelegate, JobTableViewCellDelegate {
 
     var jobs = [Job]()
     var requestParameters = ("", "")
@@ -58,6 +58,7 @@ class JobsTableController: UITableViewController, ServerDispatcherDelegate {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
         cell.job = jobs[indexPath.row]
+        cell.delegate = self
         cell.loadData()
 
         return cell
@@ -93,6 +94,14 @@ class JobsTableController: UITableViewController, ServerDispatcherDelegate {
         } catch {
             print("Serialization error:")
         }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+
+    // MARK: Job Table View Cell Delegate
+
+    func didFinishDownloadImage() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
