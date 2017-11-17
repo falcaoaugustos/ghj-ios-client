@@ -62,6 +62,10 @@ class JobsTableController: UITableViewController, ServerDispatcherDelegate {
 
     // MARK: Table View Delegate
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "JobViewSegue", sender: jobs[indexPath.row])
     }
