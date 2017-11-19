@@ -11,10 +11,12 @@ import UIKit
 class JobController: UIViewController {
 
     @IBOutlet var propertiesTextView: UITextView!
-
+    @IBOutlet weak var companyLogoImageView: UIImageView!
+    
     var job: Job?
 
     override func viewDidLoad() {
+        setupCompanyLogo()
         setupProperties()
     }
 
@@ -23,16 +25,42 @@ class JobController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    private func setupCompanyLogo() {
+        guard let job = job else { return }
+
+        if job.companyLogo != "" {
+            getImageFrom(url: job.companyLogo)
+        } else {
+            companyLogoImageView.image = UIImage(named: "imageNotFound")
+        }
+    }
+
+    private func getImageFrom(url: String) {
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let imageData = try Data(contentsOf: URL(string: url)!)
+
+                DispatchQueue.main.async {
+                    self.companyLogoImageView.image = UIImage(data: imageData)
+                }
+            } catch let error {
+                print(error)
+            }
+        }
+    }
+
     private func setupProperties() {
         guard let job = job else { return }
 
         propertiesTextView.text = """
-        Title: \(job.title)
-        Location: \(job.location)
-        Type: \(job.type)
+        \(job.title)
+        \(job.location)
+        \(job.type)
+
         Link: \(job.url)
-        Company: \(job.company)
-        Company URL: \(job.companyUrl)
+
+        \(job.company)
+        \(job.companyUrl)
         """
     }
 
