@@ -1,5 +1,5 @@
 # ghj
-GitHub Jobs experiment implementation for iOS
+GitHub Jobs iOS client implementation
 
 ## Preview
 ![PREVIEW_1](media/screenshot01.png) ![PREVIEW_2](media/screenshot02.png) ![PREVIEW_3](media/screenshot03.png)
