@@ -1,6 +1,9 @@
 # ghj
 GitHub Jobs experiment implementation for iOS
 
+## Preview
+![PREVIEW_1](media/screenshot01.png) ![PREVIEW_2](media/screenshot02.png) ![PREVIEW_3](media/screenshot03.png)
+
 ## Usage
 
 To run the example project, clone the repo, and build the project.
