@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Job {
+struct Job: Decodable {
     let id: String
     let title: String
     let location: String
     let type: String
     let company: String
-    let companyUrl: String
-    let companyLogo: String
-    let url: String
+    let company_url: String?
+    let company_logo: String?
+    let url: String?
 }

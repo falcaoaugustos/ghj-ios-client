@@ -75,22 +75,10 @@ class JobsTableController: UITableViewController, ServerDispatcherDelegate {
     func didReceiveRequestResponseData(_ data: Data?) {
         guard let receiveData = data else { return }
         do {
-            let mainData = try JSONSerialization.jsonObject(with: receiveData, options: []) as! [[String: Any]]
-            mainData.forEach({
-                let job = Job(
-                    id: $0["id"] as? String ?? "",
-                    title: $0["title"] as? String ?? "",
-                    location: $0["location"] as? String ?? "",
-                    type: $0["type"] as? String ?? "",
-                    company: $0["company"] as? String ?? "",
-                    companyUrl: $0["company_url"] as? String ?? "",
-                    companyLogo: $0["company_logo"] as? String ?? "",
-                    url: $0["url"] as? String ?? ""
-                )
-                self.jobs.append(job)
-            })
-        } catch {
-            print("Serialization error:")
+            let mainData = try JSONDecoder().decode([Job].self, from: receiveData)
+            self.jobs = mainData
+        } catch let error {
+            print("Serialization error: \(error)")
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()

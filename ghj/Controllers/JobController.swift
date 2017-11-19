@@ -28,8 +28,8 @@ class JobController: UIViewController {
     private func setupCompanyLogo() {
         guard let job = job else { return }
 
-        if job.companyLogo != "" {
-            getImageFrom(url: job.companyLogo)
+        if let url = job.company_logo, url != "" {
+            getImageFrom(url: url)
         } else {
             companyLogoImageView.image = UIImage(named: "imageNotFound")
         }
@@ -57,10 +57,10 @@ class JobController: UIViewController {
         \(job.location)
         \(job.type)
 
-        Link: \(job.url)
+        Link: \(job.url ?? "")
 
         \(job.company)
-        \(job.companyUrl)
+        \(job.company_url ?? "")
         """
     }
 
