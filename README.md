@@ -1,4 +1,4 @@
-# ghj
+# ghj-ios-client
 GitHub Jobs iOS client implementation
 
 ## Preview
